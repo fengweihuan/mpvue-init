@@ -46,7 +46,7 @@ van-button + van-button{
   align-items: center;
 }
 .empty_text{
-  background-color: #EBEBEB;
+  width: 100%;
   color: #999;
   font-size: 15px;
   text-align: center;

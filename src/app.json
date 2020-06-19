@@ -8,6 +8,12 @@
     "pages/login/main",
     "pages/listDetail/main"
   ],
+  "subPackages": [
+    {
+      "root": "pages/statistics",
+      "pages": ["main"]
+    }
+  ],
   "window": {
     "navigationBarBackgroundColor": "#4B53C2",
     "navigationBarTitleText": "WeChat",
@@ -16,7 +22,6 @@
     "onReachBottomDistance": 50
   },
   "usingComponents": {
-    "nav-bar": "static/nav-bar/index",
     "van-button": "static/vant/button/index",
     "van-cell-group": "static/vant/cell-group/index",
     "van-cell": "static/vant/cell/index",
@@ -41,7 +46,8 @@
     "van-checkbox-group": "static/vant/checkbox-group/index",
     "van-collapse": "static/vant/collapse/index",
     "van-collapse-item": "static/vant/collapse-item/index",
-    "van-steps": "static/vant/steps/index"
+    "van-steps": "static/vant/steps/index",
+    "van-divider": "static/vant/divider/index"
   },
   "tabBar": {
     "color": "#333",

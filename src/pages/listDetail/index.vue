@@ -1,16 +1,41 @@
 <template>
   <div class="listDetail">
-    <nav-bar ext-class="nav_bar" backgroundColorTop="#EBEBEB" iconTheme="white" back home title="详情" background="#4B53C2" color="#ffffff" @back="backHandle" @home="homeHandle"></nav-bar>
+    <van-nav-bar
+      title="标题"
+      left-text="返回"
+      left-arrow
+      fixed
+      @clickLeft="backHandle"
+    />
     <div class="wrap">自定义navBar</div>
+    <xt-select
+      ref="select1"
+      title="多项选择"
+      :options="options"
+      multiple
+      collapse-tags
+      :value="selectValue"
+    ></xt-select>
   </div>
 </template>
 
 <script>
+import xtSelect from '@/components/xt-select'
 export default {
   name: 'listDetail',
+  components: {
+    xtSelect
+  },
   data () {
     return {
-      id: ''
+      id: '',
+      selectValue: '',
+      options: [
+        { label: '选项一', value: '111', select: false },
+        { label: '选项二', value: '222', select: false },
+        { label: '选项三', value: '333', select: false },
+        { label: '选项四', value: '444', select: false }
+      ]
     }
   },
   onLoad (options) {
@@ -36,6 +61,6 @@ export default {
 
 <style lang="scss" scoped>
 .listDetail{
-  padding: 0;
+  padding-top: 70px;
 }
 </style>
